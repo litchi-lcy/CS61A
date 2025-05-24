@@ -388,6 +388,7 @@ def final_strategy(score, opponent_score):
 
     *** YOUR DESCRIPTION HERE ***
     """
+    """
     # BEGIN PROBLEM 12
     zero_score = sus_points(score,boar_brawl(score,opponent_score))
     one_score = sus_points(score + roll_dice(1))
@@ -400,7 +401,7 @@ def final_strategy(score, opponent_score):
         return 2
 
     # END PROBLEM 12
-
+    """
 
 ##########################
 # Command Line Interface #
