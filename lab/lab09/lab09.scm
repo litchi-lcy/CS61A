@@ -10,7 +10,12 @@
 
 (define (composed f g) (lambda(x)  (f (g x)) ))
 
-(define (repeat f n) (lambda(x)(composed repeat f (x) ) n  ))
+'***amazing
+(define (repeat f n) 
+  (if (< n 1)
+    (lambda (x) x)
+    (composed f(repeat f(- n 1)))))
+
 
 (define (max a b)
   (if (> a b)
@@ -22,4 +27,13 @@
       b
       a))
 
-(define (gcd a b) 'YOUR-CODE-HERE)
+(define (gcd a b) 
+  (if (> a b)
+    (if (integer? (/ a b))
+        (// a b)
+        (gcd (b (modulo a b)))
+    )
+    (gcd b a)
+
+  )
+)
